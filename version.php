@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2026082800;
-$plugin->requires = 2024040100; // Moodle 5.0.
+$plugin->requires = 2024040100; // Moodle 4.4.
 $plugin->component = 'mod_teaserlabel';
 $plugin->maturity = MATURITY_BETA;
 $plugin->release = '1.0.1-beta';
