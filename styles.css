@@ -1,0 +1,187 @@
+/* Teaser on course page */
+.teaserlabel-teaser {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* On course page: collapse the icon column so the teaser spans the full row width. */
+.activity-grid:has(.teaserlabel-teaser) {
+    grid-template-columns: 1fr;
+}
+
+.activity-grid:has(.teaserlabel-teaser) .activityiconcontainer {
+    display: none;
+}
+
+/* Position variants */
+.teaserlabel-media-left {
+    flex-direction: row;
+}
+
+.teaserlabel-media-right {
+    flex-direction: row-reverse;
+}
+
+.teaserlabel-media-top {
+    flex-direction: column;
+}
+
+.teaserlabel-media-bottom {
+    flex-direction: column-reverse;
+}
+
+.teaserlabel-media-center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Text area */
+.teaserlabel-text {
+    flex: 1;
+    min-width: 200px;
+    font-size: var(--bs-body-font-size);
+}
+
+/* Media sizes */
+.teaserlabel-size-small .teaserlabel-image,
+.teaserlabel-size-small .teaserlabel-video {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.teaserlabel-size-medium .teaserlabel-image,
+.teaserlabel-size-medium .teaserlabel-video {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.teaserlabel-size-large .teaserlabel-image,
+.teaserlabel-size-large .teaserlabel-video {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.teaserlabel-size-original .teaserlabel-image,
+.teaserlabel-size-original .teaserlabel-video {
+    max-width: 100%;
+}
+
+.teaserlabel-image,
+.teaserlabel-video {
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Read more link (inline, right-aligned, plain text style) */
+.teaserlabel-readmore {
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+.teaserlabel-readmore a {
+    font-size: var(--bs-body-font-size);
+    color: #0f6cbf;
+    text-decoration: none;
+}
+
+.teaserlabel-readmore a:hover {
+    text-decoration: underline;
+}
+
+/* Detail page container */
+.teaserlabel-detail-container {
+    max-width: 784px;
+    margin: 0 auto;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Detail view: no card styling, tight connection to full content */
+.teaserlabel-teaser.teaserlabel-detail {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.teaserlabel-detail + .teaserlabel-fullcontent {
+    padding-top: 0;
+}
+
+/* Full view page */
+.teaserlabel-fullcontent {
+    padding: 0.5rem 0;
+}
+
+.teaserlabel-backlink {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.teaserlabel-backlink-top {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-top: 0;
+    border-top: none;
+}
+
+.teaserlabel-bottombar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teaserlabel-backlink a {
+    color: #0f6cbf;
+}
+
+/* Content modal */
+.teaserlabel-modal-body {
+    padding: 1.5rem;
+}
+
+/* Lightbox trigger */
+.teaserlabel-lightbox-trigger {
+    cursor: zoom-in;
+    display: inline-block;
+}
+
+.teaserlabel-lightbox-trigger:hover .teaserlabel-image {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+/* Lightbox modal (Bootstrap 5) */
+.teaserlabel-lightbox-content {
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.teaserlabel-lightbox-content .modal-body img {
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.teaserlabel-lightbox-close {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    z-index: 1;
+    opacity: 0.9;
+    padding: 0.5rem;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.teaserlabel-lightbox-close:hover {
+    opacity: 1;
+}

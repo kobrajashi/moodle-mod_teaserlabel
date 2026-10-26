@@ -1,0 +1,59 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mod_teaserlabel/full_view
+
+    Template for the full content view page.
+
+    Context variables required:
+    * hasteaser - Whether the teaser section should be shown
+    * teasertext - The formatted teaser text HTML
+    * mediahtml - The media element HTML
+    * fullcontent - The formatted full content HTML
+    * backtocourseurl - URL back to the course
+    * backtocoursetext - Text for the back link
+
+    Example context (json):
+    {
+        "hasteaser": true,
+        "teasertext": "<p>This is a teaser...</p>",
+        "mediahtml": "<img src=\"image.jpg\" alt=\"\" class=\"teaserlabel-image\" />",
+        "fullcontent": "<p>Full content here...</p>",
+        "backtocourseurl": "/course/view.php?id=1",
+        "backtocoursetext": "Back to course"
+    }
+}}
+{{#hasteaser}}
+<div class="teaserlabel-full-teaser">
+    {{#mediahtml}}
+        <div class="teaserlabel-media">
+            {{{mediahtml}}}
+        </div>
+    {{/mediahtml}}
+    <div class="teaserlabel-teaser-text">
+        {{{teasertext}}}
+    </div>
+</div>
+{{/hasteaser}}
+
+<div class="teaserlabel-fullcontent">
+    {{{fullcontent}}}
+</div>
+
+<div class="teaserlabel-backlink">
+    <a href="{{backtocourseurl}}">{{backtocoursetext}}</a>
+</div>
