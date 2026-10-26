@@ -1,48 +1,49 @@
 # Teaser Label (mod_teaserlabel)
 
-Aktivitätsmodul, das auf der Kursseite eine **Teaser-Vorschau mit Text und optionalem
-Medium** anzeigt. Ein Link *„Weiterlesen"* führt zum vollständigen Inhalt auf einer
-Detailseite – gedacht als platzsparende Alternative zum Textfeld, wenn längere Inhalte
-die Kursseite sonst überfrachten.
+Activity module that shows a **teaser preview with text and an optional medium** on the course page. A
+*"Read more"* link leads to the full content on a detail page – meant as a space-saving alternative to a text and
+media area when longer content would otherwise clutter the course page.
 
-Ohne Teaser-Modus verhält sich das Modul wie ein normales Textfeld und zeigt den
-vollständigen Inhalt direkt auf der Kursseite.
+Without teaser mode, the module behaves like a regular text and media area and shows the full content directly on
+the course page.
 
-## Einstellungen je Instanz
+## Requirements
 
-- **Teaser-Modus verwenden** – schaltet zwischen Vorschau mit „Weiterlesen" und
-  direkter Vollanzeige.
-- **Teaser-Text** – die Vorschau auf der Kursseite.
-- **Teaser-Medium** – Bild oder Video.
-- **Position des Mediums** – links, rechts, oben, unten, zentriert.
-- **Größe des Mediums** – klein, mittel, groß, Originalgröße.
-- **Vollständiger Inhalt** – wird nach Klick auf „Weiterlesen" (bzw. ohne Teaser-Modus
-  direkt auf der Kursseite) ausgegeben.
+- **Moodle 5.0 or later** (`$plugin->requires = 2025041400`). Developed against Moodle 5.1.
 
-Die Darstellung läuft über zwei Mustache-Templates (`teaser_view`, `full_view`), ist
-also im Theme überschreibbar.
+## Settings per instance
 
-## Berechtigungen
+- **Use teaser mode** – switches between a preview with "Read more" and showing everything directly.
+- **Teaser text** – the preview on the course page.
+- **Teaser media** – an image or a video.
+- **Media position** – left, right, top, bottom, center.
+- **Media size** – small, medium, large, original.
+- **Full content** – shown after clicking "Read more" (or, without teaser mode, directly on the course page).
 
-- `mod/teaserlabel:addinstance` – Teaser Label anlegen
-- `mod/teaserlabel:view` – Teaser Label ansehen
+Rendering uses two Mustache templates (`teaser_view`, `full_view`), so themes can override it.
+
+## Capabilities
+
+- `mod/teaserlabel:addinstance` – add a Teaser Label
+- `mod/teaserlabel:view` – view a Teaser Label
 
 ## Installation
 
+From Moodle 5.1, plugins live in the `public` directory:
+
 ```bash
-cp -r mod_teaserlabel /pfad/zu/moodle/public/mod/teaserlabel
+cp -r mod_teaserlabel /path/to/moodle/public/mod/teaserlabel
 php admin/cli/upgrade.php
 ```
 
-Ab Moodle 5.1 liegen Plugins im Verzeichnis `public`. Zu beachten: der Zielordner heißt
-`teaserlabel`, nicht `mod_teaserlabel`. Alternativ als Administrator/in über
-*Website-Administration → Mitteilungen*.
+On Moodle 5.0 the target is `/path/to/moodle/mod/teaserlabel`. Note that the target directory is called
+`teaserlabel`, not `mod_teaserlabel`. Alternatively, install as an administrator via
+*Site administration → Notifications*.
 
 ## Status
 
-`MATURITY_BETA`, Release 1.0.1-beta. Backup/Restore ist implementiert (`backup/`),
-Unit-Tests liegen unter `tests/`.
+`MATURITY_BETA`, release 1.0.1-beta. Backup/restore is implemented (`backup/`), unit tests live in `tests/`.
 
-## Lizenz
+## License
 
-GNU GPL v3 oder später – siehe [LICENSE](LICENSE).
+GNU GPL v3 or later – see [LICENSE](LICENSE).
