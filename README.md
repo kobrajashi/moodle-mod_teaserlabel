@@ -24,8 +24,8 @@ Rendering uses two Mustache templates (`teaser_view`, `full_view`), so themes ca
 
 ## Capabilities
 
-- `mod/teaserlabel:addinstance` – add a Teaser Label
-- `mod/teaserlabel:view` – view a Teaser Label
+- `mod/teaserlabel:addinstance` – add a teaser label
+- `mod/teaserlabel:view` – view a teaser label
 
 ## Installation
 

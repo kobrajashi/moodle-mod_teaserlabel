@@ -22,7 +22,7 @@ use core_privacy\local\metadata\null_provider;
  * Privacy subsystem implementation for mod_teaserlabel.
  *
  * @package    mod_teaserlabel
- * @copyright  2026 Your Name
+ * @copyright  2026 Tobias Sanders
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements null_provider {

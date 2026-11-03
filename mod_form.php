@@ -18,7 +18,7 @@
  * The mod_teaserlabel instance creation/editing form.
  *
  * @package    mod_teaserlabel
- * @copyright  2026 Your Name
+ * @copyright  2026 Tobias Sanders
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

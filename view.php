@@ -18,7 +18,7 @@
  * Displays the full content of a teaserlabel instance.
  *
  * @package    mod_teaserlabel
- * @copyright  2026 Your Name
+ * @copyright  2026 Tobias Sanders
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

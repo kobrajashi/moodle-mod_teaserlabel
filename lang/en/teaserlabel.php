@@ -18,17 +18,17 @@
  * English language strings for mod_teaserlabel.
  *
  * @package    mod_teaserlabel
- * @copyright  2026 Your Name
+ * @copyright  2026 Tobias Sanders
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Teaser Label';
-$string['pluginadministration'] = 'Teaser Label administration';
-$string['modulename'] = 'Teaser Label';
-$string['modulename_help'] = 'The Teaser Label displays a teaser preview with text and optional media (image or video) on the course page. A "Read more" link leads to the full content on a detail page.';
-$string['modulenameplural'] = 'Teaser Labels';
-$string['teaserlabel:addinstance'] = 'Add a new Teaser Label';
-$string['teaserlabel:view'] = 'View Teaser Label';
+$string['pluginname'] = 'Teaser label';
+$string['pluginadministration'] = 'Teaser label administration';
+$string['modulename'] = 'Teaser label';
+$string['modulename_help'] = 'The teaser label displays a teaser preview with text and optional media (image or video) on the course page. A "Read more" link leads to the full content on a detail page.';
+$string['modulenameplural'] = 'Teaser labels';
+$string['teaserlabel:addinstance'] = 'Add a new teaser label';
+$string['teaserlabel:view'] = 'View teaser label';
 
 $string['useteaser'] = 'Use teaser mode';
 $string['useteaser_help'] = 'If enabled, only a teaser will be shown on the course page with a "Read more" link to the full content.';
@@ -62,4 +62,4 @@ $string['printpage'] = 'Print page';
 $string['teasersettings'] = 'Teaser settings';
 $string['contentsettings'] = 'Content';
 
-$string['privacy:metadata'] = 'The Teaser Label plugin does not store any personal data.';
+$string['privacy:metadata'] = 'The teaser label plugin does not store any personal data.';
