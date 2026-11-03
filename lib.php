@@ -22,8 +22,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Returns the supported features.
  *
@@ -196,8 +194,11 @@ function teaserlabel_delete_instance($id) {
 function teaserlabel_get_coursemodule_info($coursemodule) {
     global $DB;
 
-    $teaserlabel = $DB->get_record('teaserlabel', ['id' => $coursemodule->instance],
-        'id, name, teasertext, teasertextformat, teasermediaposition, teasermediasize, fullcontent, fullcontentformat');
+    $teaserlabel = $DB->get_record(
+        'teaserlabel',
+        ['id' => $coursemodule->instance],
+        'id, name, teasertext, teasertextformat, teasermediaposition, teasermediasize, fullcontent, fullcontentformat'
+    );
 
     if (!$teaserlabel) {
         return null;
@@ -223,8 +224,11 @@ function teaserlabel_get_coursemodule_info($coursemodule) {
     // Noclean=true: HTML Purifier drops inline SVG and other markup outside its whitelist,
     // which silently mangles editor content. These fields are only writable by users who
     // may edit the activity — same trust model as format_module_intro() in core.
-    $teasertext = format_text($teasertext, $teaserlabel->teasertextformat,
-        ['context' => $context, 'filter' => false, 'noclean' => true]);
+    $teasertext = format_text(
+        $teasertext,
+        $teaserlabel->teasertextformat,
+        ['context' => $context, 'filter' => false, 'noclean' => true]
+    );
 
     $mediahtml = teaserlabel_get_teaser_media_html($teaserlabel, $context);
 
@@ -261,8 +265,11 @@ function teaserlabel_get_coursemodule_info($coursemodule) {
     );
     // Filter=false: see note above — this runs during modinfo cache build.
     // Noclean=true: see note above.
-    $fullcontent = format_text($fullcontent, $teaserlabel->fullcontentformat,
-        ['context' => $context, 'filter' => false, 'noclean' => true]);
+    $fullcontent = format_text(
+        $fullcontent,
+        $teaserlabel->fullcontentformat,
+        ['context' => $context, 'filter' => false, 'noclean' => true]
+    );
 
     // Bootstrap 5 modal with full content.
     $content .= '<div class="modal fade" id="' . $modalid . '" tabindex="-1" aria-hidden="true">' .

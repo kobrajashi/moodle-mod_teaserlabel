@@ -26,7 +26,6 @@
  * Structure step to restore one teaserlabel activity.
  */
 class restore_teaserlabel_activity_structure_step extends restore_activity_structure_step {
-
     /**
      * Define the structure to be restored.
      *

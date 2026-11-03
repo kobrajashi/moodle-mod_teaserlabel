@@ -22,13 +22,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 require_once($CFG->dirroot . '/mod/teaserlabel/backup/moodle2/backup_teaserlabel_stepslib.php');
 
 /**
  * Provides the steps to perform one complete backup of the teaserlabel activity.
  */
 class backup_teaserlabel_activity_task extends backup_activity_task {
-
     /**
      * No specific settings for this activity.
      */

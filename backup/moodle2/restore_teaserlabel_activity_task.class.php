@@ -22,13 +22,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 require_once($CFG->dirroot . '/mod/teaserlabel/backup/moodle2/restore_teaserlabel_stepslib.php');
 
 /**
  * Provides the steps to restore one teaserlabel activity.
  */
 class restore_teaserlabel_activity_task extends restore_activity_task {
-
     /**
      * No specific settings for this activity.
      */

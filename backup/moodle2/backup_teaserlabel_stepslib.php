@@ -26,7 +26,6 @@
  * Define the complete teaserlabel structure for backup.
  */
 class backup_teaserlabel_activity_structure_step extends backup_activity_structure_step {
-
     /**
      * Define the structure to be backed up.
      *

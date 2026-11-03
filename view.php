@@ -85,8 +85,11 @@ if (!empty($teaserlabel->teasertext)) {
     }
 
     echo '<div class="teaserlabel-text">' .
-        format_text($teasertext, $teaserlabel->teasertextformat,
-            ['context' => $context, 'noclean' => true]) .
+        format_text(
+            $teasertext,
+            $teaserlabel->teasertextformat,
+            ['context' => $context, 'noclean' => true]
+        ) .
         '</div>';
 
     if ($mediahtml && in_array($teaserlabel->teasermediaposition, ['right', 'bottom', 'center'])) {
@@ -109,8 +112,11 @@ $fullcontent = file_rewrite_pluginfile_urls(
 echo '<div class="teaserlabel-fullcontent">';
 // Noclean=true: keep inline SVG and other markup HTML Purifier would strip. Editor fields
 // are only writable by users who may edit the activity, as with core activity intros.
-echo format_text($fullcontent, $teaserlabel->fullcontentformat,
-    ['context' => $context, 'noclean' => true]);
+echo format_text(
+    $fullcontent,
+    $teaserlabel->fullcontentformat,
+    ['context' => $context, 'noclean' => true]
+);
 echo '</div>';
 
 // Lightbox modal for teaser image.
@@ -123,7 +129,7 @@ echo '<button type="button" class="btn btn-outline-secondary btn-sm" onclick="wi
     get_string('printpage', 'mod_teaserlabel') . '</button>';
 echo '</div>';
 
-echo '</div>'; // .teaserlabel-detail-container
+echo '</div>'; // Closes .teaserlabel-detail-container.
 
 // Print script: opens a new window with teaser + content in A4 layout.
 echo '<script>

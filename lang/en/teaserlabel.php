@@ -22,44 +22,37 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Teaser label';
-$string['pluginadministration'] = 'Teaser label administration';
-$string['modulename'] = 'Teaser label';
-$string['modulename_help'] = 'The teaser label displays a teaser preview with text and optional media (image or video) on the course page. A "Read more" link leads to the full content on a detail page.';
-$string['modulenameplural'] = 'Teaser labels';
-$string['teaserlabel:addinstance'] = 'Add a new teaser label';
-$string['teaserlabel:view'] = 'View teaser label';
-
-$string['useteaser'] = 'Use teaser mode';
-$string['useteaser_help'] = 'If enabled, only a teaser will be shown on the course page with a "Read more" link to the full content.';
-$string['teasertext'] = 'Teaser text';
-$string['teasertext_help'] = 'This text will be shown as a preview on the course page.';
-$string['teasermedia'] = 'Teaser media';
-$string['teasermedia_help'] = 'Add an image or video to display with the teaser.';
+$string['backtocourse'] = '&larr; Back to course';
+$string['contentsettings'] = 'Content';
+$string['fullcontent'] = 'Full content';
+$string['fullcontent_help'] = 'The complete content that will be shown when "Read more" is clicked (in teaser mode) or directly on the course page (without teaser).';
 $string['mediaposition'] = 'Media position';
 $string['mediaposition_help'] = 'Position of the media relative to the teaser text.';
 $string['mediasize'] = 'Media size';
 $string['mediasize_help'] = 'Display size of the teaser media.';
-
+$string['modulename'] = 'Teaser label';
+$string['modulename_help'] = 'The teaser label displays a teaser preview with text and optional media (image or video) on the course page. A "Read more" link leads to the full content on a detail page.';
+$string['modulenameplural'] = 'Teaser labels';
+$string['pluginadministration'] = 'Teaser label administration';
+$string['pluginname'] = 'Teaser label';
+$string['position_bottom'] = 'Bottom';
+$string['position_center'] = 'Center';
 $string['position_left'] = 'Left';
 $string['position_right'] = 'Right';
 $string['position_top'] = 'Top';
-$string['position_bottom'] = 'Bottom';
-$string['position_center'] = 'Center';
-
-$string['size_small'] = 'Small';
-$string['size_medium'] = 'Medium';
-$string['size_large'] = 'Large';
-$string['size_original'] = 'Original';
-
-$string['fullcontent'] = 'Full content';
-$string['fullcontent_help'] = 'The complete content that will be shown when "Read more" is clicked (in teaser mode) or directly on the course page (without teaser).';
-
-$string['readmore'] = 'Read more';
-$string['backtocourse'] = '&larr; Back to course';
 $string['printpage'] = 'Print page';
-
-$string['teasersettings'] = 'Teaser settings';
-$string['contentsettings'] = 'Content';
-
 $string['privacy:metadata'] = 'The teaser label plugin does not store any personal data.';
+$string['readmore'] = 'Read more';
+$string['size_large'] = 'Large';
+$string['size_medium'] = 'Medium';
+$string['size_original'] = 'Original';
+$string['size_small'] = 'Small';
+$string['teaserlabel:addinstance'] = 'Add a new teaser label';
+$string['teaserlabel:view'] = 'View teaser label';
+$string['teasermedia'] = 'Teaser media';
+$string['teasermedia_help'] = 'Add an image or video to display with the teaser.';
+$string['teasersettings'] = 'Teaser settings';
+$string['teasertext'] = 'Teaser text';
+$string['teasertext_help'] = 'This text will be shown as a preview on the course page.';
+$string['useteaser'] = 'Use teaser mode';
+$string['useteaser_help'] = 'If enabled, only a teaser will be shown on the course page with a "Read more" link to the full content.';

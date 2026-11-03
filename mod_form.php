@@ -30,7 +30,6 @@ require_once($CFG->dirroot . '/course/moodleform_mod.php');
  * Module instance settings form.
  */
 class mod_teaserlabel_mod_form extends moodleform_mod {
-
     /**
      * Defines the form fields.
      */
@@ -39,7 +38,7 @@ class mod_teaserlabel_mod_form extends moodleform_mod {
 
         $mform = $this->_form;
 
-        // ---- General section ----
+        // General section.
         $mform->addElement('header', 'general', get_string('general', 'form'));
 
         $mform->addElement('text', 'name', get_string('name'), ['size' => '64']);
@@ -47,27 +46,36 @@ class mod_teaserlabel_mod_form extends moodleform_mod {
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
 
-        // ---- Teaser settings section (always visible, directly after name) ----
-        $mform->addElement('header', 'teasersettings',
-            get_string('teasersettings', 'mod_teaserlabel'));
+        // Teaser settings section (always visible, directly after name).
+        $mform->addElement(
+            'header',
+            'teasersettings',
+            get_string('teasersettings', 'mod_teaserlabel')
+        );
         $mform->setExpanded('teasersettings', true);
 
         // Teaser text editor.
-        $mform->addElement('editor', 'teasertext_editor',
+        $mform->addElement(
+            'editor',
+            'teasertext_editor',
             get_string('teasertext', 'mod_teaserlabel'),
             ['rows' => 10],
-            $this->get_editor_options());
+            $this->get_editor_options()
+        );
         $mform->addHelpButton('teasertext_editor', 'teasertext', 'mod_teaserlabel');
 
         // Teaser media file picker.
-        $mform->addElement('filemanager', 'teasermedia',
+        $mform->addElement(
+            'filemanager',
+            'teasermedia',
             get_string('teasermedia', 'mod_teaserlabel'),
             null,
             [
                 'subdirs' => 0,
                 'maxfiles' => 1,
                 'accepted_types' => ['image', 'video'],
-            ]);
+            ]
+        );
         $mform->addHelpButton('teasermedia', 'teasermedia', 'mod_teaserlabel');
 
         // Media position.
@@ -78,8 +86,12 @@ class mod_teaserlabel_mod_form extends moodleform_mod {
             'bottom' => get_string('position_bottom', 'mod_teaserlabel'),
             'center' => get_string('position_center', 'mod_teaserlabel'),
         ];
-        $mform->addElement('select', 'teasermediaposition',
-            get_string('mediaposition', 'mod_teaserlabel'), $positions);
+        $mform->addElement(
+            'select',
+            'teasermediaposition',
+            get_string('mediaposition', 'mod_teaserlabel'),
+            $positions
+        );
         $mform->addHelpButton('teasermediaposition', 'mediaposition', 'mod_teaserlabel');
         $mform->setDefault('teasermediaposition', 'left');
 
@@ -90,23 +102,33 @@ class mod_teaserlabel_mod_form extends moodleform_mod {
             'large' => get_string('size_large', 'mod_teaserlabel'),
             'original' => get_string('size_original', 'mod_teaserlabel'),
         ];
-        $mform->addElement('select', 'teasermediasize',
-            get_string('mediasize', 'mod_teaserlabel'), $sizes);
+        $mform->addElement(
+            'select',
+            'teasermediasize',
+            get_string('mediasize', 'mod_teaserlabel'),
+            $sizes
+        );
         $mform->addHelpButton('teasermediasize', 'mediasize', 'mod_teaserlabel');
         $mform->setDefault('teasermediasize', 'medium');
 
-        // ---- Content section ----
-        $mform->addElement('header', 'contentsettings',
-            get_string('contentsettings', 'mod_teaserlabel'));
+        // Content section.
+        $mform->addElement(
+            'header',
+            'contentsettings',
+            get_string('contentsettings', 'mod_teaserlabel')
+        );
         $mform->setExpanded('contentsettings', true);
 
-        $mform->addElement('editor', 'fullcontent_editor',
+        $mform->addElement(
+            'editor',
+            'fullcontent_editor',
             get_string('fullcontent', 'mod_teaserlabel'),
             ['rows' => 20],
-            $this->get_editor_options());
+            $this->get_editor_options()
+        );
         $mform->addHelpButton('fullcontent_editor', 'fullcontent', 'mod_teaserlabel');
 
-        // ---- Standard course module elements ----
+        // Standard course module elements.
         $this->standard_coursemodule_elements();
         $this->add_action_buttons();
     }
