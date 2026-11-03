@@ -42,7 +42,7 @@ On Moodle 5.0 the target is `/path/to/moodle/mod/teaserlabel`. Note that the tar
 
 ## Status
 
-`MATURITY_BETA`, release 1.0.1-beta. Backup/restore is implemented (`backup/`), unit tests live in `tests/`.
+`MATURITY_BETA`, release 1.0.2-beta. Backup/restore is implemented (`backup/`), unit tests live in `tests/`.
 
 ## License
 
